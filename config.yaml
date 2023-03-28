@@ -1,0 +1,29 @@
+image_base_path: data/image_base
+train_paths: [ data/train.json ]
+develop_paths: [ data/develop.json ]
+test_paths: [ data/test.json ]
+test_multi_turn_paths: [ data/test_multi_turn.json ]
+object_detector_checkpoint_path: data/object_detector_checkpoint.pth
+clip_version: openai/clip-vit-base-patch32
+image_resolution: 128
+space_size: 512
+initial_temperature: 1.0
+unit_channel_count: 128
+residual_dropout_rate: 0.0
+attention_head_size: 64
+attention_resolutions: [ 32, 16, 8 ]
+level_section_count: 3
+level_multipliers: [ 1, 1, 2, 3, 4 ]
+time_step_count: 1000
+sampling_time_step_count: 250
+composition_dropout_rate: 0.2
+composition_guidance_scale: 3.0
+matching_guidance_scale: 2.0
+vlb_loss_scale: 1.0
+backbone_activity: 0.001
+learning_rate: 0.0001
+batch_size: 32
+gradient_accumulation_span: 8
+round_count: 10
+session_count: 5
+is_recurrent: True
